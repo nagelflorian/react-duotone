@@ -1,0 +1,22 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": 0,
+    "no-plusplus": [
+      "error",
+      {"allowForLoopAfterthoughts": true }
+    ],
+    "no-return-assign": 0,
+    "react/prefer-es6-class": 0,
+    "react/prefer-stateless-function": 0,
+    "react/jsx-filename-extension": 0,
+    "jsx-a11y/img-has-alt": 0,
+    "react/sort-comp": 0,
+    "react/no-unused-prop-types": 0
+  }
+}
