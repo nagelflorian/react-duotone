@@ -3,6 +3,10 @@
   "version": "0.9.0",
   "description": "React Duotone Component",
   "main": "lib/main.js",
+  "files": [
+    "dist",
+    "lib"
+  ],
   "scripts": {
     "build:umd": "webpack --devtool source-map --config webpack.build.js",
     "build:umd:min": "cross-env MINIFY=1 webpack --devtool source-map --config webpack.build.js",
