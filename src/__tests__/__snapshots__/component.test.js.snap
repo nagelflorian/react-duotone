@@ -1,0 +1,37 @@
+exports[`DuotoneImageComponent renders additional attributes correctly 1`] = `
+<div>
+  <img
+    alt="GitHub Avatar"
+    height="56"
+    imageUrl="https://avatars.githubusercontent.com/u/7649376?v=3"
+    onLoad={[Function bound onLoad]}
+    style={
+      Object {
+        "display": "none"
+      }
+    }
+    width="56" />
+  <img
+    alt="GitHub Avatar"
+    height="56"
+    imageUrl="https://avatars.githubusercontent.com/u/7649376?v=3"
+    src=""
+    width="56" />
+</div>
+`;
+
+exports[`DuotoneImageComponent renders the image correctly 1`] = `
+<div>
+  <img
+    imageUrl="https://avatars.githubusercontent.com/u/7649376?v=3"
+    onLoad={[Function bound onLoad]}
+    style={
+      Object {
+        "display": "none"
+      }
+    } />
+  <img
+    imageUrl="https://avatars.githubusercontent.com/u/7649376?v=3"
+    src="" />
+</div>
+`;
