@@ -1,4 +1,6 @@
-# React Duotone
+# React Duotone ![[Travis Build Status](https://travis-ci.org/nagelflorian/react-duotone)](https://img.shields.io/travis/nagelflorian/react-duotone.svg?style=flat)
+
+![Example Duotone Image](https://cloud.githubusercontent.com/assets/7649376/19024780/e0fac730-890b-11e6-9640-1e2f604614e3.png)
 
 ## Installation
 
@@ -18,7 +20,9 @@ class App extends Component {
     return <DuotoneImage
       className='image-preview'
       alt='Your image description'
-      src='your-image.jpg' />;
+      src='your-image.jpg'
+      primaryColor={'#FBFBFB'}
+      secondaryColor={'#283B6B'} />;
   }
 }
 
