@@ -1,4 +1,4 @@
-# React Duotone ![[Travis Build Status](https://travis-ci.org/nagelflorian/react-duotone)](https://img.shields.io/travis/nagelflorian/react-duotone.svg?style=flat)
+# React Duotone ![[Travis Build Status](https://travis-ci.org/nagelflorian/react-duotone)](https://img.shields.io/travis/nagelflorian/react-duotone.svg?style=flat) ![[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)](https://img.shields.io/badge/code--style-airbnb-blue.svg?style=flat)
 
 ![Example Duotone Image](https://cloud.githubusercontent.com/assets/7649376/19024780/e0fac730-890b-11e6-9640-1e2f604614e3.png)
 
@@ -21,8 +21,8 @@ class App extends Component {
       className='image-preview'
       alt='Your image description'
       src='your-image.jpg'
-      primaryColor={'#FBFBFB'}
-      secondaryColor={'#283B6B'} />;
+      primaryColor='#FBFBFB'
+      secondaryColor='#283B6B' />;
   }
 }
 

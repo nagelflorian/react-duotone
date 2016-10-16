@@ -20,56 +20,56 @@ const App = () => {
     <div className='duotone-container'>
       <DuotoneImage
         src={image1}
-        primaryColor={'#FBFBFB'}
-        secondaryColor={'#283B6B'}
+        primaryColor='#FBFBFB'
+        secondaryColor='#283B6B'
       />
       <span>Primary-Color: #FBFBFB, Secondary-Color: #283B6B</span>
     </div>
     <div className='duotone-container'>
       <DuotoneImage
         src={image2}
-        primaryColor={'#FCC862'}
-        secondaryColor={'#2D45C6'}
+        primaryColor='#FCC862'
+        secondaryColor='#2D45C6'
       />
       <span>Primary-Color: #FCC862, Secondary-Color: #2D45C6</span>
     </div>
     <div className='duotone-container'>
       <DuotoneImage
         src={image3}
-        primaryColor={'#71DF6F'}
-        secondaryColor={'#272D67'}
+        primaryColor='#71DF6F'
+        secondaryColor='#272D67'
       />
       <span>Primary-Color: #71DF6F, Secondary-Color: #272D67</span>
     </div>
     <div className='duotone-container'>
       <DuotoneImage
         src={image4}
-        primaryColor={'#D92037'}
-        secondaryColor={'#2A3060'}
+        primaryColor='#D92037'
+        secondaryColor='#2A3060'
       />
       <span>Primary-Color: #D92037, Secondary-Color: #2A3060</span>
     </div>
     <div className='duotone-container'>
       <DuotoneImage
         src={image5}
-        primaryColor={'#8ADFD0'}
-        secondaryColor={'#5C2998'}
+        primaryColor='#8ADFD0'
+        secondaryColor='#5C2998'
       />
       <span>Primary-Color: #8ADFD0, Secondary-Color: #5C2998</span>
     </div>
     <div className='duotone-container'>
       <DuotoneImage
         src={image6}
-        primaryColor={'#FCC862'}
-        secondaryColor={'#2D45C6'}
+        primaryColor='#FCC862'
+        secondaryColor='#2D45C6'
       />
       <span>Primary-Color: #FCC862, Secondary-Color: #2D45C6</span>
     </div>
     <div className='duotone-container'>
       <DuotoneImage
         src={image7}
-        primaryColor={'#A3D5CA'}
-        secondaryColor={'#E52839'}
+        primaryColor='#A3D5CA'
+        secondaryColor='#E52839'
       />
       <span>Primary-Color: #A3D5CA, Secondary-Color: #E52839</span>
     </div>
