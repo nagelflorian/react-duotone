@@ -5,6 +5,8 @@ import createDuotoneImage from './create-duotone-image';
 
 type Props = {
   src: any,
+  width?: number,
+  height?: number,
   primaryColor: string,
   secondaryColor: string,
 }
@@ -16,36 +18,47 @@ class DuotoneImage extends Component {
   constructor() {
     super();
     this.state = { duotoneImageSrc: '' };
-    if (this.onLoad) {
-      this.onLoad = this.onLoad.bind(this);
-    }
   }
   props: Props
-  onLoad(): void {
-    this.setState({
-      duotoneImageSrc: createDuotoneImage(
-        this.originalImage,
-        this.props.primaryColor,
-        this.props.secondaryColor
-      ),
-    });
+  componentWillMount(): void {
+    this.getDuotoneImage();
+  }
+  componentWillReceiveProps(): void {
+    this.getDuotoneImage();
+  }
+  getDuotoneImage(): void {
+    const img = new Image();
+
+    if (this.props.width) {
+      img.width = this.props.width;
+    }
+    if (this.props.height) {
+      img.height = this.props.height;
+    }
+
+    img.src = this.props.src;
+    img.onload = () => {
+      this.setState({
+        duotoneImageSrc: createDuotoneImage(
+          img,
+          this.props.primaryColor,
+          this.props.secondaryColor,
+        ),
+      });
+    };
   }
   render() {
-    const additionalAttributes = omit(this.props, ['primaryColor', 'secondaryColor']);
+    const additionalAttributes = omit(this.props, [
+      'primaryColor',
+      'secondaryColor',
+      'src',
+    ]);
 
     return (
-      <div>
-        <img
-          {...additionalAttributes}
-          ref={a => this.originalImage = a}
-          style={{ display: 'none' }}
-          onLoad={this.onLoad}
-        />
-        <img
-          {...additionalAttributes}
-          src={this.state.duotoneImageSrc}
-        />
-      </div>
+      <img
+        {...additionalAttributes}
+        src={this.state.duotoneImageSrc}
+      />
     );
   }
 }
