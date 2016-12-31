@@ -23,7 +23,9 @@ const App = () => {
         primaryColor='#FBFBFB'
         secondaryColor='#283B6B'
       />
-      <span>Primary-Color: #FBFBFB, Secondary-Color: #283B6B</span>
+      <div>
+        <span>Primary-Color: #FBFBFB, Secondary-Color: #283B6B</span>
+      </div>
     </div>
     <div className='duotone-container'>
       <DuotoneImage
@@ -31,7 +33,9 @@ const App = () => {
         primaryColor='#FCC862'
         secondaryColor='#2D45C6'
       />
-      <span>Primary-Color: #FCC862, Secondary-Color: #2D45C6</span>
+      <div>
+        <span>Primary-Color: #FCC862, Secondary-Color: #2D45C6</span>
+      </div>
     </div>
     <div className='duotone-container'>
       <DuotoneImage
@@ -39,7 +43,9 @@ const App = () => {
         primaryColor='#71DF6F'
         secondaryColor='#272D67'
       />
-      <span>Primary-Color: #71DF6F, Secondary-Color: #272D67</span>
+      <div>
+        <span>Primary-Color: #71DF6F, Secondary-Color: #272D67</span>
+      </div>
     </div>
     <div className='duotone-container'>
       <DuotoneImage
@@ -47,7 +53,9 @@ const App = () => {
         primaryColor='#D92037'
         secondaryColor='#2A3060'
       />
-      <span>Primary-Color: #D92037, Secondary-Color: #2A3060</span>
+      <div>
+        <span>Primary-Color: #D92037, Secondary-Color: #2A3060</span>
+      </div>
     </div>
     <div className='duotone-container'>
       <DuotoneImage
@@ -55,7 +63,9 @@ const App = () => {
         primaryColor='#8ADFD0'
         secondaryColor='#5C2998'
       />
-      <span>Primary-Color: #8ADFD0, Secondary-Color: #5C2998</span>
+      <div>
+        <span>Primary-Color: #8ADFD0, Secondary-Color: #5C2998</span>
+      </div>
     </div>
     <div className='duotone-container'>
       <DuotoneImage
@@ -63,7 +73,9 @@ const App = () => {
         primaryColor='#FCC862'
         secondaryColor='#2D45C6'
       />
-      <span>Primary-Color: #FCC862, Secondary-Color: #2D45C6</span>
+      <div>
+        <span>Primary-Color: #FCC862, Secondary-Color: #2D45C6</span>
+      </div>
     </div>
     <div className='duotone-container'>
       <DuotoneImage
@@ -71,7 +83,9 @@ const App = () => {
         primaryColor='#A3D5CA'
         secondaryColor='#E52839'
       />
-      <span>Primary-Color: #A3D5CA, Secondary-Color: #E52839</span>
+      <div>
+        <span>Primary-Color: #A3D5CA, Secondary-Color: #E52839</span>
+      </div>
     </div>
   </div>
 }
