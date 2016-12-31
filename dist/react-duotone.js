@@ -255,35 +255,48 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var _this = _possibleConstructorReturn(this, (DuotoneImage.__proto__ || Object.getPrototypeOf(DuotoneImage)).call(this));
 	
 	    _this.state = { duotoneImageSrc: '' };
-	    if (_this.onLoad) {
-	      _this.onLoad = _this.onLoad.bind(_this);
-	    }
 	    return _this;
 	  }
 	
 	  _createClass(DuotoneImage, [{
-	    key: 'onLoad',
-	    value: function onLoad() {
-	      this.setState({
-	        duotoneImageSrc: (0, _createDuotoneImage2.default)(this.originalImage, this.props.primaryColor, this.props.secondaryColor)
-	      });
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.getDuotoneImage();
+	    }
+	  }, {
+	    key: 'componentWillReceiveProps',
+	    value: function componentWillReceiveProps() {
+	      this.getDuotoneImage();
+	    }
+	  }, {
+	    key: 'getDuotoneImage',
+	    value: function getDuotoneImage() {
+	      var _this2 = this;
+	
+	      var img = new Image();
+	
+	      if (this.props.width) {
+	        img.width = this.props.width;
+	      }
+	      if (this.props.height) {
+	        img.height = this.props.height;
+	      }
+	
+	      img.src = this.props.src;
+	      img.onload = function () {
+	        _this2.setState({
+	          duotoneImageSrc: (0, _createDuotoneImage2.default)(img, _this2.props.primaryColor, _this2.props.secondaryColor)
+	        });
+	      };
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var _this2 = this;
+	      var additionalAttributes = (0, _lodash.omit)(this.props, ['primaryColor', 'secondaryColor', 'src']);
 	
-	      var additionalAttributes = (0, _lodash.omit)(this.props, ['primaryColor', 'secondaryColor']);
-	
-	      return _react2.default.createElement('div', null, _react2.default.createElement('img', _extends({}, additionalAttributes, {
-	        ref: function ref(a) {
-	          return _this2.originalImage = a;
-	        },
-	        style: { display: 'none' },
-	        onLoad: this.onLoad
-	      })), _react2.default.createElement('img', _extends({}, additionalAttributes, {
+	      return _react2.default.createElement('img', _extends({}, additionalAttributes, {
 	        src: this.state.duotoneImageSrc
-	      })));
+	      }));
 	    }
 	  }]);
 	
