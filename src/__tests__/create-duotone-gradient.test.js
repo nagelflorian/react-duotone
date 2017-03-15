@@ -6,6 +6,8 @@ const secondaryColor = [25, 4, 199];
 
 describe('create-duotone-gradient', () => {
   it('should return the correct gradient map', () => {
-    expect(createDuotoneGradient(primaryColor, secondaryColor)).toMatchSnapshot();
+    expect(
+      createDuotoneGradient(primaryColor, secondaryColor),
+    ).toMatchSnapshot();
   });
 });

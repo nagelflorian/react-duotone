@@ -6,17 +6,22 @@ import createDuotoneGradient from './create-duotone-gradient';
 function createDuotoneImage(
   imageElement: HTMLImageElement,
   primaryColor: string,
-  secondaryColor: string
-): string|null {
+  secondaryColor: string,
+): string | null {
   if (!imageElement || !(imageElement instanceof HTMLImageElement)) {
     throw new Error('Invalid arguments, You need to pass an image element');
   }
 
   if (!primaryColor || !secondaryColor) {
-    throw new Error('Invalid arguments, You need to pass a primary and secondary color');
+    throw new Error(
+      'Invalid arguments, You need to pass a primary and secondary color',
+    );
   }
 
-  const duotoneGradient = createDuotoneGradient(hexToRgb(primaryColor), hexToRgb(secondaryColor));
+  const duotoneGradient = createDuotoneGradient(
+    hexToRgb(primaryColor),
+    hexToRgb(secondaryColor),
+  );
 
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
@@ -40,7 +45,7 @@ function createDuotoneImage(
     const blue = pixels[i + 2];
 
     // using relative luminance
-    const avg = Math.round((0.2126 * red) + (0.7152 * green) + (0.0722 * blue));
+    const avg = Math.round(0.2126 * red + 0.7152 * green + 0.0722 * blue);
     pixels[i] = duotoneGradient[avg][0];
     pixels[i + 1] = duotoneGradient[avg][1];
     pixels[i + 2] = duotoneGradient[avg][2];
