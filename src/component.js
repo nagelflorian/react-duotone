@@ -9,17 +9,17 @@ type Props = {
   height?: number,
   primaryColor: string,
   secondaryColor: string,
-}
+};
 
 class DuotoneImage extends Component {
   onLoad: void;
-  state: {duotoneImageSrc: any}
-  originalImage: any
+  state: { duotoneImageSrc: any };
+  originalImage: any;
   constructor() {
     super();
     this.state = { duotoneImageSrc: '' };
   }
-  props: Props
+  props: Props;
   componentWillMount(): void {
     this.getDuotoneImage();
   }
@@ -54,12 +54,7 @@ class DuotoneImage extends Component {
       'src',
     ]);
 
-    return (
-      <img
-        {...additionalAttributes}
-        src={this.state.duotoneImageSrc}
-      />
-    );
+    return <img {...additionalAttributes} src={this.state.duotoneImageSrc} />;
   }
 }
 
