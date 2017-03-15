@@ -65,8 +65,5 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1"
-  },
-  "dependencies": {
-    "lodash": "^4.16.2"
   }
 }
