@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`create-duotone-gradient should return the correct gradient map 1`] = `
 Array [
   Array [
