@@ -1,4 +1,4 @@
-# React Duotone [![Travis Build Status](https://travis-ci.org/nagelflorian/react-duotone.svg?branch=master)](https://travis-ci.org/nagelflorian/react-duotone) ![[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)](https://img.shields.io/badge/code--style-airbnb-blue.svg?style=flat)
+# React Duotone [![Travis Build Status](https://travis-ci.org/nagelflorian/react-duotone.svg?branch=master)](https://travis-ci.org/nagelflorian/react-duotone) ![[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)](https://img.shields.io/badge/code--style-airbnb-blue.svg?style=flat) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ![Example Duotone Image](https://cloud.githubusercontent.com/assets/7649376/19024780/e0fac730-890b-11e6-9640-1e2f604614e3.png)
 
