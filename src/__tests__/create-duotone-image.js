@@ -6,9 +6,7 @@ const primaryColor = '#66FA75';
 const secondaryColor = '#1904C7';
 
 describe('createDuotoneImage', () => {
-  document.body.innerHTML = '<div>' +
-    `  <img id="duotone-image" src="${imageUrl}" />` +
-    '</div>';
+  document.body.innerHTML = `<div><img id="duotone-image" src="${imageUrl}" /></div>`;
 
   const imageEl = document.getElementById('duotone-image');
 
