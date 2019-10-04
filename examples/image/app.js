@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 import { DuotoneImage } from '../../src/main.js';
 import image1 from './image_1.jpg';
