@@ -13,7 +13,6 @@ script:
   - npm run lint
   - npm run type-check
   - npm test
-  - yarn run danger
 
 after_success:
   - npm run report-coverage
