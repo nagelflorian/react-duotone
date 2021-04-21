@@ -29,6 +29,7 @@
     "jsx-a11y/img-has-alt": 0,
     "react/sort-comp": 0,
     "react/no-unused-prop-types": 0,
+    "react/prop-types": 0,
     "prettier/prettier": [
       "error",
       {
