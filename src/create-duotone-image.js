@@ -3,6 +3,25 @@
 import hexToRgb from './hex-to-rgb';
 import createDuotoneGradient from './create-duotone-gradient';
 
+/**
+ * Applies a duotone colour effect to a fully-loaded HTMLImageElement using the
+ * HTML5 Canvas 2D API and returns the result as a data URL.
+ *
+ * The algorithm converts each pixel to its relative luminance and maps it to
+ * an interpolated colour between `secondaryColor` (shadows) and `primaryColor`
+ * (highlights).
+ *
+ * @param {HTMLImageElement} imageElement - A fully-loaded image element. The
+ *   element's natural dimensions are used; width/height attributes are ignored.
+ * @param {string} primaryColor - Hex colour for the highlight tone,
+ *   e.g. `"#FBFBFB"`.
+ * @param {string} secondaryColor - Hex colour for the shadow tone,
+ *   e.g. `"#283B6B"`.
+ * @returns {string|null} A PNG data URL of the processed image, or `null` if
+ *   the environment does not support Canvas 2D (e.g. Node.js without a shim).
+ * @throws {Error} If `imageElement` is not an `HTMLImageElement`.
+ * @throws {Error} If `primaryColor` or `secondaryColor` is falsy.
+ */
 function createDuotoneImage(
   imageElement: HTMLImageElement,
   primaryColor: string,
