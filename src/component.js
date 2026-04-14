@@ -1,5 +1,5 @@
 /* @flow */
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { omit } from 'lodash';
 import createDuotoneImage from './create-duotone-image';
 
@@ -11,51 +11,33 @@ type Props = {
   secondaryColor: string,
 };
 
-type State = {
-  duotoneImageSrc: string | null,
-};
+function DuotoneImage(props: Props) {
+  const { src, width, height, primaryColor, secondaryColor } = props;
+  const [duotoneImageSrc, setDuotoneImageSrc] = useState('');
 
-class DuotoneImage extends Component<Props, State> {
-  constructor() {
-    super();
-    this.state = { duotoneImageSrc: '' };
-  }
-  componentWillMount(): void {
-    this.getDuotoneImage();
-  }
-  componentWillReceiveProps(): void {
-    this.getDuotoneImage();
-  }
-  getDuotoneImage(): void {
+  useEffect(() => {
     const img = new Image();
 
-    if (this.props.width) {
-      img.width = this.props.width;
+    if (width) {
+      img.width = width;
     }
-    if (this.props.height) {
-      img.height = this.props.height;
+    if (height) {
+      img.height = height;
     }
 
-    img.src = this.props.src;
+    img.src = src;
     img.onload = () => {
-      this.setState({
-        duotoneImageSrc: createDuotoneImage(
-          img,
-          this.props.primaryColor,
-          this.props.secondaryColor,
-        ),
-      });
+      setDuotoneImageSrc(createDuotoneImage(img, primaryColor, secondaryColor));
     };
-  }
-  render(): any {
-    const additionalAttributes = omit(this.props, [
-      'primaryColor',
-      'secondaryColor',
-      'src',
-    ]);
+  }, [src, width, height, primaryColor, secondaryColor]);
 
-    return <img {...additionalAttributes} src={this.state.duotoneImageSrc} />;
-  }
+  const additionalAttributes = omit(props, [
+    'primaryColor',
+    'secondaryColor',
+    'src',
+  ]);
+
+  return <img {...additionalAttributes} src={duotoneImageSrc} />;
 }
 
 export default DuotoneImage;
