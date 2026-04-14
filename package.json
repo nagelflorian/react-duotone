@@ -3,9 +3,11 @@
   "version": "2.1.1",
   "description": "React Duotone Component",
   "main": "lib/main.js",
+  "types": "index.d.ts",
   "files": [
     "dist",
-    "lib"
+    "lib",
+    "index.d.ts"
   ],
   "scripts": {
     "build:umd": "webpack --devtool source-map --config webpack.build.js",
