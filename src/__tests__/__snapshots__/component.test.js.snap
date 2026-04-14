@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`DuotoneImage component matches snapshot 1`] = `
+<img
+  src=""
+/>
+`;
+
 exports[`DuotoneImageComponent renders additional attributes correctly 1`] = `
 <img
   alt="GitHub Avatar"
