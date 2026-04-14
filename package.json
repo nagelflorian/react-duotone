@@ -40,6 +40,9 @@
     "url": "https://github.com/nagelflorian/react-duotone/issues"
   },
   "homepage": "https://github.com/nagelflorian/react-duotone#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
   "peerDependencies": {
     "react": "^0.14.7 || ^15.0.0",
     "react-dom": "^0.14.7 || ^15.0.0"
