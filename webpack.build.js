@@ -1,18 +1,14 @@
 var path = require('path');
-var webpack = require('webpack');
 var BASE_DIR = process.cwd();
 var COMPONENT_FILE = 'react-duotone';
 var COMPONENT_NAME = 'ReactDuotone';
-var plugins = [];
 
 function getPackageMain() {
   return require(path.resolve(BASE_DIR, 'package.json')).main;
 }
 
-if (process.env.MINIFY) {
-  plugins.push(
-    new webpack.optimize.UglifyJsPlugin()
-  );
+var isMinified = !!process.env.MINIFY;
+if (isMinified) {
   COMPONENT_FILE += '.min';
 }
 
@@ -24,17 +20,15 @@ module.exports = {
     libraryTarget: 'umd'
   },
   externals: {
-    'react': 'React',
+    react: 'React',
     'react-dom': 'ReactDOM'
   },
   module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      }
+    rules: [
+      { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' }
     ]
   },
-  plugins: plugins
+  optimization: {
+    minimize: isMinified
+  }
 };
