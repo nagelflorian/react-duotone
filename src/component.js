@@ -4,7 +4,7 @@ import { omit } from 'lodash';
 import createDuotoneImage from './create-duotone-image';
 
 type Props = {
-  src: any,
+  src: string,
   width?: number,
   height?: number,
   primaryColor: string,
@@ -20,9 +20,11 @@ class DuotoneImage extends Component<Props, State> {
     super();
     this.state = { duotoneImageSrc: '' };
   }
+  /* $FlowFixMe */
   componentWillMount(): void {
     this.getDuotoneImage();
   }
+  /* $FlowFixMe */
   componentWillReceiveProps(): void {
     this.getDuotoneImage();
   }
@@ -47,7 +49,7 @@ class DuotoneImage extends Component<Props, State> {
       });
     };
   }
-  render(): any {
+  render(): React$Node {
     const additionalAttributes = omit(this.props, [
       'primaryColor',
       'secondaryColor',
