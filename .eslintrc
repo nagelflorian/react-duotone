@@ -2,42 +2,36 @@
   "extends": [
     "airbnb",
     "prettier",
-    "prettier/flowtype",
-    "prettier/react"
+    "plugin:@typescript-eslint/recommended"
   ],
-  "parser": "babel-eslint",
-  "env": {
-    "browser": true,
-    "node": true
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
   },
-  "plugins": [
-  	"prettier"
-  ],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "env": { "browser": true, "node": true },
+  "settings": {
+    "import/extensions": [".ts", ".tsx"],
+    "import/resolver": {
+      "node": { "extensions": [".ts", ".tsx", ".js"] }
+    }
+  },
   "rules": {
     "import/no-extraneous-dependencies": 0,
-    "no-plusplus": [
-      "error",
-      {
-      	"allowForLoopAfterthoughts": true
-      }
-    ],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "no-return-assign": 0,
-    "react/prefer-es6-class": 0,
-    "react/prefer-stateless-function": 0,
-    "react/jsx-filename-extension": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "react/require-default-props": 0,
     "jsx-a11y/img-has-alt": 0,
-    "react/sort-comp": 0,
-    "react/no-unused-prop-types": 0,
     "react/prop-types": 0,
+    "@typescript-eslint/no-explicit-any": "warn",
     "prettier/prettier": [
       "error",
       {
         "singleQuote": true,
         "trailingComma": "all",
-        "printWidth": 80,
-        "jsxBracketSameLine": true
+        "printWidth": 80
       }
-    ],
+    ]
   }
 }
