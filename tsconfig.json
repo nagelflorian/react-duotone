@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "CommonJS",
+    "lib": ["ES2015", "DOM"],
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "src/__tests__", "examples"]
+}
