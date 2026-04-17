@@ -5,41 +5,41 @@ describe('createDuotoneImage', () => {
   describe('argument validation', () => {
     it('throws when imageElement is null', () => {
       expect(() => createDuotoneImage(null, '#ffffff', '#000000')).toThrow(
-        'Invalid arguments, You need to pass an image element'
+        'Invalid arguments, You need to pass an image element',
       );
     });
 
     it('throws when imageElement is undefined', () => {
       expect(() => createDuotoneImage(undefined, '#ffffff', '#000000')).toThrow(
-        'Invalid arguments, You need to pass an image element'
+        'Invalid arguments, You need to pass an image element',
       );
     });
 
     it('throws when imageElement is not an HTMLImageElement', () => {
       const div = document.createElement('div');
       expect(() => createDuotoneImage(div, '#ffffff', '#000000')).toThrow(
-        'Invalid arguments, You need to pass an image element'
+        'Invalid arguments, You need to pass an image element',
       );
     });
 
     it('throws when primaryColor is missing', () => {
       const img = new Image();
       expect(() => createDuotoneImage(img, null, '#000000')).toThrow(
-        'Invalid arguments, You need to pass a primary and secondary color'
+        'Invalid arguments, You need to pass a primary and secondary color',
       );
     });
 
     it('throws when secondaryColor is missing', () => {
       const img = new Image();
       expect(() => createDuotoneImage(img, '#ffffff', null)).toThrow(
-        'Invalid arguments, You need to pass a primary and secondary color'
+        'Invalid arguments, You need to pass a primary and secondary color',
       );
     });
 
     it('throws when both colors are missing', () => {
       const img = new Image();
       expect(() => createDuotoneImage(img, null, null)).toThrow(
-        'Invalid arguments, You need to pass a primary and secondary color'
+        'Invalid arguments, You need to pass a primary and secondary color',
       );
     });
   });

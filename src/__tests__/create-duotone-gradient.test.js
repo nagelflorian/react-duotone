@@ -46,7 +46,8 @@ describe('createDuotoneGradient', () => {
     // Midpoint should be roughly halfway between primary and secondary
     midpoint.forEach((value, channel) => {
       const expected = Math.round(
-        primaryColor[channel] * (127 / 255) + secondaryColor[channel] * (1 - 127 / 255)
+        primaryColor[channel] * (127 / 255) +
+          secondaryColor[channel] * (1 - 127 / 255),
       );
       expect(value).toBe(expected);
     });
