@@ -13,9 +13,10 @@ if (isMinified) {
 }
 
 module.exports = {
-  entry: path.resolve(BASE_DIR, getPackageMain()),
+  entry: path.resolve(BASE_DIR, 'src/main.js'),
   output: {
-    filename: path.resolve(BASE_DIR, 'dist/' + COMPONENT_FILE + '.js'),
+    path: path.resolve(BASE_DIR, 'dist'),
+    filename: COMPONENT_FILE + '.js',
     library: COMPONENT_NAME,
     libraryTarget: 'umd'
   },

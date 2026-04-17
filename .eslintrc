@@ -18,16 +18,23 @@
     "react/jsx-filename-extension": 0,
     "react/require-default-props": 0,
     "jsx-a11y/img-has-alt": 0,
+    "jsx-a11y/alt-text": 0,
     "react/sort-comp": 0,
     "react/no-unused-prop-types": 0,
     "react/prop-types": 0,
+    "react/no-deprecated": 0,
+    "react/destructuring-assignment": 0,
+    "react/jsx-props-no-spreading": 0,
+    "lines-between-class-members": 0,
+    "prefer-destructuring": 0,
     "prettier/prettier": [
       "error",
       {
         "singleQuote": true,
         "trailingComma": "all",
         "printWidth": 80,
-        "jsxBracketSameLine": true
+        "jsxBracketSameLine": true,
+        "parser": "babel-flow"
       }
     ]
   }
