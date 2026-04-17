@@ -27,5 +27,3 @@ jobs:
     - run: npm run type-check
     - run: npm test
     - run: npm run bundle
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v4
