@@ -5,6 +5,9 @@
     "browser": true,
     "node": true
   },
+  "globals": {
+    "React$Node": "readonly"
+  },
   "plugins": [
     "prettier"
   ],
