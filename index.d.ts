@@ -26,7 +26,7 @@ export interface DuotoneImageProps extends React.ImgHTMLAttributes<HTMLImageElem
  *   alt="Duotone photo"
  * />
  */
-export class DuotoneImage extends React.Component<DuotoneImageProps> {}
+export function DuotoneImage(props: DuotoneImageProps): React.ReactElement;
 
 /**
  * Applies a duotone color effect to an HTMLImageElement using Canvas 2D.
