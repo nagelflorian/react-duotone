@@ -18,7 +18,7 @@
     "lint": "eslint src --ext .ts,.tsx",
     "prettier": "prettier --single-quote --trailing-comma all --print-width 80 --write \"src/**/*.{ts,tsx}\"",
     "test": "jest --coverage",
-    "start": "webpack-dev-server --inline --content-base examples/",
+    "start": "webpack-dev-server --static examples/",
     "prepare": "husky install"
   },
   "lint-staged": {
