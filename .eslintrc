@@ -9,8 +9,15 @@
     "node": true
   },
   "plugins": ["prettier"],
+  "settings": {
+    "import/extensions": [".js", ".ts", ".tsx"],
+    "import/resolver": {
+      "node": { "extensions": [".js", ".ts", ".tsx"] }
+    }
+  },
   "rules": {
     "import/no-extraneous-dependencies": 0,
+    "import/extensions": ["error", "ignorePackages", { "js": "never", "ts": "never", "tsx": "never" }],
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "no-return-assign": 0,
     "react/prefer-es6-class": 0,
