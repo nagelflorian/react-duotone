@@ -24,9 +24,13 @@ module.exports = {
     react: 'React',
     'react-dom': 'ReactDOM'
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+  },
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' }
+      { test: /\.tsx?$/, exclude: /node_modules/, use: 'ts-loader' },
+      { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
     ]
   },
   optimization: {

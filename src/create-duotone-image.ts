@@ -1,5 +1,3 @@
-/* @flow */
-
 import hexToRgb from './hex-to-rgb';
 import createDuotoneGradient from './create-duotone-gradient';
 
@@ -18,10 +16,14 @@ function createDuotoneImage(
     );
   }
 
-  const duotoneGradient = createDuotoneGradient(
-    hexToRgb(primaryColor),
-    hexToRgb(secondaryColor),
-  );
+  const primaryRgb = hexToRgb(primaryColor);
+  const secondaryRgb = hexToRgb(secondaryColor);
+
+  if (!primaryRgb || !secondaryRgb) {
+    return null;
+  }
+
+  const duotoneGradient = createDuotoneGradient(primaryRgb, secondaryRgb);
 
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
