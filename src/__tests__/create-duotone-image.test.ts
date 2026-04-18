@@ -16,7 +16,7 @@ describe('createDuotoneImage', () => {
         undefined as unknown as string,
         undefined as unknown as string,
       ),
-    ).toThrowError(
+    ).toThrow(
       'Invalid arguments, You need to pass a primary and secondary color',
     );
   });
@@ -24,7 +24,7 @@ describe('createDuotoneImage', () => {
   it('should throw if only one color is passed', () => {
     expect(() =>
       createDuotoneImage(imageEl, primaryColor, undefined as unknown as string),
-    ).toThrowError(
+    ).toThrow(
       'Invalid arguments, You need to pass a primary and secondary color',
     );
   });

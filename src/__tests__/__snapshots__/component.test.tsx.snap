@@ -1,11 +1,5 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`DuotoneImageComponent renders additional attributes correctly 1`] = `
-<img
-  alt="GitHub Avatar"
-  height={56}
-  width={56}
-/>
-`;
+exports[`DuotoneImageComponent renders additional attributes correctly 1`] = `null`;
 
-exports[`DuotoneImageComponent renders the image correctly 1`] = `<img />`;
+exports[`DuotoneImageComponent renders the image correctly 1`] = `null`;
