@@ -13,7 +13,7 @@ if (isMinified) {
 }
 
 module.exports = {
-  entry: path.resolve(BASE_DIR, 'src/main.js'),
+  entry: path.resolve(BASE_DIR, 'lib/main.js'),
   output: {
     path: path.resolve(BASE_DIR, 'dist'),
     filename: COMPONENT_FILE + '.js',
