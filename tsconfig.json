@@ -9,6 +9,7 @@
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node16",
     "declaration": true,
+    "rootDir": "src",
     "outDir": "lib",
     "sourceMap": true,
     "skipLibCheck": true,
