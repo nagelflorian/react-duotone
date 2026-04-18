@@ -23,14 +23,18 @@ module.exports = {
     path: path.resolve(process.cwd(), 'examples/__build__'),
     publicPath: '/__build__/'
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+  },
   module: {
     rules: [
       { test: /\.jpg/, use: 'url-loader' },
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-      { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' }
+      { test: /\.tsx?$/, exclude: /node_modules/, use: 'ts-loader' },
+      { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
     ]
   },
   optimization: {
-    splitChunks: { chunks: 'all' }
+    splitChunks: { chunks: 'all', name: 'shared' },
   }
 };

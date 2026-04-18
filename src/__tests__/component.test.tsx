@@ -1,4 +1,3 @@
-/* global describe, it, expect */
 import React from 'react';
 import renderer from 'react-test-renderer';
 import DuotoneImageComponent from '../component';
@@ -26,8 +25,8 @@ describe('DuotoneImageComponent', () => {
           primaryColor="#66FA75"
           secondaryColor="#1904C7"
           alt="GitHub Avatar"
-          height="56"
-          width="56"
+          height={56}
+          width={56}
         />,
       )
       .toJSON();

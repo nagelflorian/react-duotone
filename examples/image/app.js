@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { DuotoneImage } from '../../src/main.js';
+import { DuotoneImage } from '../../src/main.ts';
 import image1 from './image_1.jpg';
 import image2 from './image_2.jpg';
 import image3 from './image_3.jpg';
