@@ -1,8 +1,7 @@
-/* global describe, it, expect */
 import createDuotoneGradient from '../create-duotone-gradient';
 
-const primaryColor = [102, 250, 117];
-const secondaryColor = [25, 4, 199];
+const primaryColor: [number, number, number] = [102, 250, 117];
+const secondaryColor: [number, number, number] = [25, 4, 199];
 
 describe('create-duotone-gradient', () => {
   it('should return the correct gradient map', () => {

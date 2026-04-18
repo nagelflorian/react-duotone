@@ -1,4 +1,3 @@
-/* global describe, it, expect */
 import hexToRgb from '../hex-to-rgb';
 
 describe('hex-to-rgb', () => {

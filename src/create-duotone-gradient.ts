@@ -1,10 +1,8 @@
-/* @flow */
-
 export default function createDuotoneGradient(
-  primaryColorRGB: Array<number>,
-  secondaryColorRGB: Array<number>,
-): Array<Array<number>> {
-  const duotoneGradient = [];
+  primaryColorRGB: [number, number, number],
+  secondaryColorRGB: [number, number, number],
+): [number, number, number][] {
+  const duotoneGradient: [number, number, number][] = [];
 
   for (let i = 0; i < 256; i++) {
     const ratio = i / 255;
