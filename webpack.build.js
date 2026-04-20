@@ -3,10 +3,6 @@ var BASE_DIR = process.cwd();
 var COMPONENT_FILE = 'react-duotone';
 var COMPONENT_NAME = 'ReactDuotone';
 
-function getPackageMain() {
-  return require(path.resolve(BASE_DIR, 'package.json')).main;
-}
-
 var isMinified = !!process.env.MINIFY;
 if (isMinified) {
   COMPONENT_FILE += '.min';
