@@ -1,6 +1,6 @@
 {
   "name": "react-duotone",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "React Duotone Component",
   "main": "lib/main.js",
   "types": "index.d.ts",
@@ -16,13 +16,14 @@
     "bundle": "mkdir -p dist && npm run build && npm run build:umd && npm run build:umd:min",
     "type-check": "tsc --noEmit",
     "lint": "eslint src --ext .ts,.tsx",
-    "prettier": "prettier --single-quote --trailing-comma all --print-width 80 --write \"src/**/*.{ts,tsx}\"",
+    "prettier": "prettier --single-quote --trailing-comma all --print-width 80 --write \"src/**/*.{ts,tsx}\" \"**/*.md\"",
+    "prettier:check": "prettier --single-quote --trailing-comma all --print-width 80 --check \"src/**/*.{ts,tsx}\" \"**/*.md\"",
     "test": "jest --coverage",
     "start": "webpack-dev-server --static examples/",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.{ts,tsx,md}": [
       "npm run prettier"
     ]
   },
