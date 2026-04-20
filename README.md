@@ -1,8 +1,8 @@
-# react-duotone
-
-[![Build Status](https://github.com/nagelflorian/react-duotone/actions/workflows/main.yml/badge.svg)](https://github.com/nagelflorian/react-duotone/actions) [![npm version](https://img.shields.io/npm/v/react-duotone.svg)](https://www.npmjs.com/package/react-duotone) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+# React-Duotone [![Build Status](https://github.com/nagelflorian/react-duotone/actions/workflows/main.yml/badge.svg)](https://github.com/nagelflorian/react-duotone/actions) [![npm version](https://img.shields.io/npm/v/react-duotone.svg)](https://www.npmjs.com/package/react-duotone) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 Apply a [duotone](https://duotones.co/) color effect to images in React. Renders via HTML5 Canvas and returns the result as a data URL.
+
+![Example Duotone Image](https://cloud.githubusercontent.com/assets/7649376/19024780/e0fac730-890b-11e6-9640-1e2f604614e3.png)
 
 ## Requirements
 
@@ -12,8 +12,6 @@ Apply a [duotone](https://duotones.co/) color effect to images in React. Renders
 
 ```bash
 npm install react-duotone
-# or
-yarn add react-duotone
 ```
 
 ## Usage
