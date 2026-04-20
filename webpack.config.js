@@ -1,6 +1,5 @@
 var fs = require('fs');
 var path = require('path');
-var webpack = require('webpack');
 var EXAMPLES_DIR = path.resolve(process.cwd(), 'examples');
 
 function buildEntries() {
