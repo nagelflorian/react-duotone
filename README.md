@@ -41,12 +41,12 @@ function App() {
 
 #### Props
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `src` | `string` | Yes | URL of the source image |
-| `primaryColor` | `string` | Yes | Hex color for the highlight (light) tone, e.g. `"#FBFBFB"` |
-| `secondaryColor` | `string` | Yes | Hex color for the shadow (dark) tone, e.g. `"#283B6B"` |
-| `...rest` | `React.ImgHTMLAttributes` | — | All standard `<img>` attributes are forwarded |
+| Prop             | Type                      | Required | Description                                                |
+| ---------------- | ------------------------- | -------- | ---------------------------------------------------------- |
+| `src`            | `string`                  | Yes      | URL of the source image                                    |
+| `primaryColor`   | `string`                  | Yes      | Hex color for the highlight (light) tone, e.g. `"#FBFBFB"` |
+| `secondaryColor` | `string`                  | Yes      | Hex color for the shadow (dark) tone, e.g. `"#283B6B"`     |
+| `...rest`        | `React.ImgHTMLAttributes` | —        | All standard `<img>` attributes are forwarded              |
 
 ### `createDuotoneImage` function
 

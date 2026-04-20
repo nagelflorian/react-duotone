@@ -16,13 +16,14 @@
     "bundle": "mkdir -p dist && npm run build && npm run build:umd && npm run build:umd:min",
     "type-check": "tsc --noEmit",
     "lint": "eslint src --ext .ts,.tsx",
-    "prettier": "prettier --single-quote --trailing-comma all --print-width 80 --write \"src/**/*.{ts,tsx}\"",
+    "prettier": "prettier --single-quote --trailing-comma all --print-width 80 --write \"src/**/*.{ts,tsx}\" \"**/*.md\"",
+    "prettier:check": "prettier --single-quote --trailing-comma all --print-width 80 --check \"src/**/*.{ts,tsx}\" \"**/*.md\"",
     "test": "jest --coverage",
     "start": "webpack-dev-server --static examples/",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.{ts,tsx,md}": [
       "npm run prettier"
     ]
   },
